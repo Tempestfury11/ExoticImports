@@ -8,3 +8,10 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
+#heading{font-family: 'Smooch', cursive;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 225px;
+  }
