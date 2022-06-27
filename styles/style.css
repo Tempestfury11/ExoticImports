@@ -15,3 +15,11 @@
     align-content: center;
     padding-top: 225px;
   }
+
+#navcolor{
+  background-color: navy;
+}
+
+#navtext{
+  color: white;
+}
