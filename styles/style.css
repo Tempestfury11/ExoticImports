@@ -4,7 +4,7 @@
         rgba(0, 0, 0, 0.45),
         rgba(0, 0, 0, 0.45)
       ),
-      /* bottom, image */ url(../images/city.jpg);
+      /* bottom, image */ url(../images/wallpaper.webp);
     background-size: cover;
     background-attachment: fixed;
   }
@@ -16,10 +16,25 @@
     padding-top: 225px;
   }
 
-#navcolor{
-  background-color: navy;
+.navbar-brand {
+  font-style: italic;
 }
 
-#navtext{
+.navbar-toggler{
+  color: grey;
+  background-color: grey;
+}
+
+.navbar a {
+  color: black;
+  margin: 0px 20px;
+  font-size: 1.3em;
+}
+
+.navbar a:hover {
   color: white;
+  text-decoration: underline;
+}
+
+#theImage { visibility: hidden;
 }
