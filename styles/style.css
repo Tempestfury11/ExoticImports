@@ -16,25 +16,3 @@
     padding-top: 225px;
   }
 
-.navbar-brand {
-  font-style: italic;
-}
-
-.navbar-toggler{
-  color: grey;
-  background-color: grey;
-}
-
-.navbar a {
-  color: black;
-  margin: 0px 20px;
-  font-size: 1.3em;
-}
-
-.navbar a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-#theImage { visibility: hidden;
-}
