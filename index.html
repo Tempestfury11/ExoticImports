@@ -4,22 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotic Imports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1789c909a3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Tempest City</title>
+
 </head>
 <body>
 
-    <section class="bg-dark text-light py-4 vh-100" id="landing">
-        <h1 id="heading" class="py-8"><strong>EXOTIC IMPORTS</strong></h1>
+    <section id="landing">
+        <div id="landing-container">
+            <h1 id="landing-heading">
+                EXOTIC IMPORTS
+            </h1>
+            <p class="landing-text">
+                IMPORTING SWEET RIDES
+            </p>
+            <p  class="landing-text">
+                AT YOUR FINGERTIPS
+            </p>
+            <p  class="landing-text">
+                SINCE 95
+            </p>
+        </div>
     </section>
 
-    <section class="bg-dark text-light" id="properties">
-        
+    <section id="car-market">
+
+        <div id="Searcher">
+            <div class="container text-center text-light p-2">
+              <div class="row">
+                  <div class="col-md-3">
+                    <h3>Year</h3>
+                  <select name="year" id="property-toilets">
+                      <option value="" disabled selected hidden>year</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                  </select>
+                  </div>
+
+                  <div class="col-md-3">
+                    <h3>Colour</h3>
+                  <select name="rooms" id="property-rooms">
+                      <option value="" disabled selected hidden>colour</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+                  </div>
+
+                  <div class="col-md-3">
+                    <h3>Country</h3>
+                  <select name="rooms" id="property-location">
+                      <option value="" disabled selected hidden>country</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                  </select>
+                  </div>
+
+                    <button id="search-btn" class="col-md-3">Search</button>
+
+              </div>
+            </div>
+          </div>
+
+        <h2 id="car-market-title">On The Market...</h2>
+          <div class="row" id="car-market-row">
+            
+          </div>
     </section>
 
-    <section class="bg-white text-dark" id="footer"></section>
+    <!-- Agent Reviews -->
+    <section id="agent">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="agent-heading">Meet our Agents</h2>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+          <img src="../image/Agents/test1.jpg" class="card-img-top agent-img" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+          <img src="../image/Agents/test2.jpg" class="card-img-top agent-img" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+          <img src="../image/Agents/test3.jpg" class="card-img-top agent-img" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+          <img src="../image/Agents/test4.jfif" class="card-img-top agent-img" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <!-- Contact -->
+    <section id="contact">
+      <form action="">
 
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+      <h2>Contact Us</h2>
+      <ul>
+        <li>Address</li>
+        <li>Phne NUmber</li>
+        <li>Email</li>
+      </ul>
+      <form action="">
+        <input type="text">
+        <button>Submit</button>
+      </form>
+      &copy CopyRight Ra'ees Benny new Data()</section>
+
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- My Js -->
     <script src="./java/code.js"></script>
 </body>
 </html>

@@ -1,18 +1,80 @@
-#landing {
-    background: 
-      /* top, transparent red, faked with gradient */ linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-      ),
-      /* bottom, image */ url(../images/wallpaper.webp);
-    background-size: cover;
-    background-attachment: fixed;
-  }
+*{
+  margin: 0;
+  padding: 0;
+}
 
-#heading{font-family: 'Smooch', cursive;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    padding-top: 225px;
-  }
+#landing{
+  background-image: url(../images/wallpaper.webp), linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0));
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  font-style: italic;
+  font-weight: 25;
+}
+#landing-container{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top:10%;
+}
+#landing-heading{
+  color: white;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 5rem;
+}
+.landing-text{
+  color: white;
+  font-size: 30px;
+}
 
+#Searcher{
+  background-color: black;
+  box-shadow: 3px 3px 3px 3px black;
+}
+#landing-filter .row{
+  color: white;
+}
+
+/* Property Listing Section */
+#car-market-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-style: italic;
+  font-size: xx-large;
+  text-decoration: underline;
+}
+#car-market-row{
+  margin: 0 0 0 35px;
+}
+.card{
+  box-shadow: 3px 3px 10px 1px black;
+}
+
+#agent-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+
+.agent-img{
+  border-radius: 50%;
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+}
+select{
+  color: grey;
+}
+option{
+  color: black;
+}
