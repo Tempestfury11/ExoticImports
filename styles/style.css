@@ -5,7 +5,6 @@
 body{
   overflow-x: hidden;
 }
-
 #landing{
   background-image: url(../images/wallpaper.webp), linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0));
   background-blend-mode: overlay;
@@ -43,7 +42,6 @@ body{
   color: white;
 }
 
-/* Property Listing Section */
 #car-market-title{
   display: flex;
   align-items: center;
@@ -74,8 +72,4 @@ option{
 
 #footer{
 padding: 20px;
-}
-
-#search-btn{
-  
 }

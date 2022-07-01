@@ -155,8 +155,8 @@ function getCar(prop){
     prop.forEach((car,index) => {
         document.getElementById('car-market-row').innerHTML +=
             `<div class="col-md-4 p-3 d-flex justify-content-center">
-            <div class="card" style="width: auto;">
-            <img src="${car.url}" class="card-img-top" alt="..." width="auto" height="auto">
+            <div class="card" style="width: 18rem;">
+            <img src="${car.url}" class="card-img-top" alt="..." width="100px" height="200px">
             <div class="card-body">
               <h4 class="card-title">${car.type} from ${car.location}</h4>
               <h4 class="card-title">${car.seats}<i class="fa-solid fa-chair"></i> <i class="fa-solid fa-car"></i>${car.toilet}</i></h4>
