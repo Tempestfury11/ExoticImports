@@ -214,27 +214,27 @@ function getCar(prop){
 getCar(car);
 
 
-// For  ToiletSearch
+
 function toilet(event){
-    // console.log(car);
+    
     let newToilets = car.filter(car => {
         return car.toilet <= event.target.value
     })
     getCar(newToilets)
 }
 
-// For Room Search
+
 function room(event){
-    // console.log(car);
+    
     let newRooms = car.filter(car => {
         return car.seats <= event.target.value
     })
     getCar(newRooms)
 }
 
-// For Buget Search
+
 function budget(event){
-    // console.log(car);
+    
     let newBudget = car.filter(car => {
         return car.price == event.target.value
     })

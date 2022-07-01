@@ -33,7 +33,7 @@ function edit(id){
 function remove(id) {
     if (id > -1) {
       car.splice(id, 1);
-      // Apply the change
+
       localStorage.setItem('car', JSON.stringify(car));
     }
     for(i=0;i<car.length;i++){
