@@ -111,6 +111,42 @@ localStorage.setItem('car',JSON.stringify([{
         toilet: 2,
         price:100000000
     },
+    {
+        id: 10,
+        type: 'Muscle',
+        location: 'America',
+        url: "https://i.postimg.cc/PJkZrw22/2022.jpg",
+        url1: "https://i.postimg.cc/sDjQ6y8Q/20222.png",
+        url2: "https://i.postimg.cc/dV70p091/20221.jpg",
+        url3: "https://i.postimg.cc/bJL8sXRW/20223.png",
+        seats: 3,
+        toilet: 2,
+        price:100000000
+    },
+    {
+        id: 11,
+        type: 'Muscle',
+        location: 'America',
+        url: "https://i.postimg.cc/mgtrJSsC/SS3.jpg",
+        url1: "https://i.postimg.cc/3RKQ5KvV/display.webp",
+        url2: "https://i.postimg.cc/G2pgx9YL/SS2.jpg",
+        url3: "https://i.postimg.cc/sXZ6Nqnq/SS1.webp",
+        seats: 3,
+        toilet: 2,
+        price:100000000
+    },
+    {
+        id: 12,
+        type: 'Muscle',
+        location: 'America',
+        url: "https://i.postimg.cc/K8DCF6DM/shel4.jpg",
+        url1: "https://i.postimg.cc/gj3NshMZ/shel1.jpg",
+        url2: "https://i.postimg.cc/zXfjkXnb/Supra1.webp",
+        url3: "https://i.postimg.cc/P5gQhW0Y/supra3.jpg",
+        seats: 3,
+        toilet: 2,
+        price:100000000
+    },
 ]));
 
 
@@ -119,8 +155,8 @@ function getCar(prop){
     prop.forEach((car,index) => {
         document.getElementById('car-market-row').innerHTML +=
             `<div class="col-md-4 p-3 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-            <img src="${car.url}" class="card-img-top" alt="..." width="1024" height="183px">
+            <div class="card" style="width: auto;">
+            <img src="${car.url}" class="card-img-top" alt="..." width="auto" height="auto">
             <div class="card-body">
               <h4 class="card-title">${car.type} from ${car.location}</h4>
               <h4 class="card-title">${car.seats}<i class="fa-solid fa-chair"></i> <i class="fa-solid fa-car"></i>${car.toilet}</i></h4>
@@ -205,6 +241,6 @@ function budget(event){
     getCar(newBudget)
 }
 
-document.querySelector('#car-seats').addEventListener('change',toilet);
+document.querySelector('#car-seats').addEventListener('change',seats);
 document.querySelector('#car-rooms').addEventListener('change',room);
 document.querySelector('#car-budget').addEventListener('change',budget);

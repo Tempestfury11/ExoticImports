@@ -11,8 +11,8 @@ function tableData(){
                 <td><img src="${td.url}" alt="" width="100px" height="80px"></td>
                 <td>${td.type}</td>
                 <td>${td.location}</td>
-                <td>${td.bed}</td>
-                <td>${td.toilet}</td>
+                <td>${td.seat}</td>
+                <td>${td.wheel}</td>
                 <td>${td.price}</td>
                 <td><i class="bi bi-pencil-square" onclick="edit(${td.id})"></i></td>
                 <td><i class="bi bi-trash" onclick="remove(${index})"></i></td>
