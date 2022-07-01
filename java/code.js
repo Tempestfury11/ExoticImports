@@ -1,44 +1,44 @@
-// let properties = JSON.parse(localStorage.getItem('property')) ?JSON.parse(localStorage.getItem('property')) :
-localStorage.setItem('property',JSON.stringify(properties = [{
+
+localStorage.setItem('car',JSON.stringify(car = [{
         id: 1,
-        type: 'Apartment',
-        location: 'American',
+        type: 'Muscle',
+        location: 'America',
         url: "https://i.postimg.cc/8kBnZd1X/19682.jpg",
         url1: "https://i.postimg.cc/3wPKw69n/1968.jpg",
         url2: "https://i.postimg.cc/mrFsKjRM/19683.jpg",
         url3: "https://i.postimg.cc/cLvy8hvj/19684.jpg",
         bed: 4,
         toilet: 2,
-        price:15000,
+        price:1391400,
         for: 'Sale'
     },
     {
         id: 2,
-        type: 'Apartment',
-        location: 'American',
+        type: 'Muscle',
+        location: 'America',
         url: "https://i.postimg.cc/fLsfdF0z/2.jpg",
         url1: "https://i.postimg.cc/5NGKDVt7/1.jpg",
         url2: "https://i.postimg.cc/MKcd7FYy/3.jpg",
         url3: "https://i.postimg.cc/wvGD39Zn/4.jpg",
         bed: 3,
         toilet: 2,
-        price:15000
+        price:137823
     },
     {
         id: 3,
-        type: 'Apartment',
-        location: 'American',
+        type: 'Muscle',
+        location: 'America',
         url: "https://i.postimg.cc/MZFj2NKn/shelbymustang2.jpg",
         url1: "https://i.postimg.cc/DzYc4QbC/shelbymustang1.jpg",
         url2: "https://i.postimg.cc/Gtzt9K4t/shelbymustang3.jpg",
         url3: "https://i.postimg.cc/sgCfyb6m/shelbymustang5.jpg",
         bed: 2,
         toilet: 2,
-        price:70000
+        price:132463
     },
     {
         id: 4,
-        type: 'Apartment',
+        type: 'Exotic',
         location: 'German',
         url: "https://i.postimg.cc/K4hGcnHH/R8.jpg",
         url1: "https://i.postimg.cc/VvMqr3jg/R81.webp",
@@ -50,7 +50,7 @@ localStorage.setItem('property',JSON.stringify(properties = [{
     },
     {
         id: 5,
-        type: 'House',
+        type: 'Exotic',
         location: 'German',
         url: "https://i.postimg.cc/nz6j79Wv/Tt.webp",
         url1: "https://i.postimg.cc/jdM56MZ4/TT1.webp",
@@ -63,7 +63,7 @@ localStorage.setItem('property',JSON.stringify(properties = [{
     },
     {
         id: 6,
-        type: 'House',
+        type: 'Exotic',
         location: 'German',
         url: "https://i.postimg.cc/9MqzWFfz/911.jpg",
         url1: "https://i.postimg.cc/YSTKtW8F/P1.jpg",
@@ -76,7 +76,7 @@ localStorage.setItem('property',JSON.stringify(properties = [{
     },
     {
         id: 7,
-        type: 'House',
+        type: 'Import',
         location: 'Japan',
         url: "https://i.postimg.cc/KzrS7dqJ/RX7.jpg",
         url1: "https://i.postimg.cc/cH1Y4vHs/RX72.jpg",
@@ -88,7 +88,7 @@ localStorage.setItem('property',JSON.stringify(properties = [{
     },
     {
         id: 8,
-        type: 'House',
+        type: 'Import',
         location: 'Japan',
         url: "https://i.postimg.cc/3JNVW4TL/Brian.jpg",
         url1: "https://i.postimg.cc/fLxH12LV/skyline4.jpg",
@@ -100,7 +100,7 @@ localStorage.setItem('property',JSON.stringify(properties = [{
     },
     {
         id: 9,
-        type: 'House',
+        type: 'Import',
         location: 'Japan',
         url: "https://i.postimg.cc/J4sYMfNv/Supra2.webp",
         url1: "https://i.postimg.cc/DZK6Qrgn/supra.jpg",
@@ -113,25 +113,25 @@ localStorage.setItem('property',JSON.stringify(properties = [{
 ]));
 
 
-function getProperties(prop){
+function getCar(prop){
     document.getElementById('car-market-row').innerHTML = '';
-    prop.forEach((property,index) => {
+    prop.forEach((car,index) => {
         document.getElementById('car-market-row').innerHTML +=
             `<div class="col-md-4 p-3 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-            <img src="${property.url}" class="card-img-top" alt="..." width="1024" height="183px">
+            <img src="${car.url}" class="card-img-top" alt="..." width="1024" height="183px">
             <div class="card-body">
-              <h4 class="card-title">${property.type} in ${property.location}</h4>
-              <h4 class="card-title"><i class="fa-solid fa-bed">${property.bed}</i> <i class="fa-solid fa-toilet">${property.toilet}</i></h4>
-              <h5>R ${property.price}</h5>
+              <h4 class="card-title">${car.type} from ${car.location}</h4>
+              <h4 class="card-title">${car.bed}<i class="fa-solid fa-chair"></i> <i class="fa-solid fa-car"></i>${car.toilet}</i></h4>
+              <h5>R ${car.price}</h5>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal${index}" onclick="modalProperties()">
-                View Property
+                View car
                </button>
             <div class="modal fade" id="exampleModal${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">${property.type}</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">${car.type}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -143,13 +143,13 @@ function getProperties(prop){
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="${property.url1}" class="d-block w-100" alt="...">
+                        <img src="${car.url1}" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="${property.url2}" class="d-block w-100" alt="...">
+                        <img src="${car.url2}" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="${property.url3}" class="d-block w-100" alt="...">
+                        <img src="${car.url3}" class="d-block w-100" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators${index}" data-bs-slide="prev">
@@ -174,40 +174,36 @@ function getProperties(prop){
             </div>`
     })
 }
-getProperties(properties);
+getCar(car);
 
 
 // For  ToiletSearch
 function toilet(event){
-    // console.log(properties);
-    let newToilets = properties.filter(property => {
-        return property.toilet <= event.target.value
+    // console.log(car);
+    let newToilets = car.filter(car => {
+        return car.toilet <= event.target.value
     })
-    getProperties(newToilets)
+    getCar(newToilets)
 }
 
 // For Room Search
 function room(event){
-    // console.log(properties);
-    let newRooms = properties.filter(property => {
-        return property.bed <= event.target.value
+    // console.log(car);
+    let newRooms = car.filter(car => {
+        return car.bed <= event.target.value
     })
-    getProperties(newRooms)
+    getCar(newRooms)
 }
 
 // For Buget Search
 function budget(event){
-    // console.log(properties);
-    let newBudget = properties.filter(property => {
-        return property.price == event.target.value
+    // console.log(car);
+    let newBudget = car.filter(car => {
+        return car.price == event.target.value
     })
-    getProperties(newBudget)
+    getCar(newBudget)
 }
 
-document.querySelector('#property-toilets').addEventListener('change',toilet);
-document.querySelector('#property-rooms').addEventListener('change',room);
-document.querySelector('#property-budget').addEventListener('change',budget);
-
-
-    // localStorage.setItem('property',JSON.stringify(property))
-    // console.log(localStorage)
+document.querySelector('#car-toilets').addEventListener('change',toilet);
+document.querySelector('#car-rooms').addEventListener('change',room);
+document.querySelector('#car-budget').addEventListener('change',budget);
