@@ -1,5 +1,6 @@
-
-localStorage.setItem('car',JSON.stringify(car = [{
+let car = JSON.parse(localStorage.getItem('car')) ?
+JSON.parse(localStorage.getItem('car')) :
+localStorage.setItem('car',JSON.stringify([{
         id: 1,
         type: 'Muscle',
         location: 'America',
@@ -7,7 +8,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/3wPKw69n/1968.jpg",
         url2: "https://i.postimg.cc/mrFsKjRM/19683.jpg",
         url3: "https://i.postimg.cc/cLvy8hvj/19684.jpg",
-        bed: 4,
+        seats: 4,
         toilet: 2,
         price:1391400,
         for: 'Sale'
@@ -20,7 +21,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/5NGKDVt7/1.jpg",
         url2: "https://i.postimg.cc/MKcd7FYy/3.jpg",
         url3: "https://i.postimg.cc/wvGD39Zn/4.jpg",
-        bed: 3,
+        seats: 3,
         toilet: 2,
         price:137823
     },
@@ -32,7 +33,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/DzYc4QbC/shelbymustang1.jpg",
         url2: "https://i.postimg.cc/Gtzt9K4t/shelbymustang3.jpg",
         url3: "https://i.postimg.cc/sgCfyb6m/shelbymustang5.jpg",
-        bed: 2,
+        seats: 2,
         toilet: 2,
         price:132463
     },
@@ -44,7 +45,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/VvMqr3jg/R81.webp",
         url2: "https://i.postimg.cc/mgZ9Bc68/R82.webp",
         url3: "https://i.postimg.cc/yxXJzBmM/R83.webp",
-        bed: 5,
+        seats: 5,
         toilet: 3,
         price:70000
     },
@@ -56,7 +57,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/jdM56MZ4/TT1.webp",
         url2: "https://i.postimg.cc/mrLWd4kc/TT2.webp",
         url3: "https://i.postimg.cc/8CzP7Mhn/TT3.webp",
-        bed: 3,
+        seats: 3,
         toilet: 2,
         price:10000000,
         for: 'Sale'
@@ -69,7 +70,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/YSTKtW8F/P1.jpg",
         url2: "https://i.postimg.cc/j5y9KkDV/P2.jpg",
         url3: "https://i.postimg.cc/Qtg6v9zh/P3.jpg",
-        bed: 3,
+        seats: 3,
         toilet: 1,
         price:10000000,
         for: 'Sale'
@@ -82,7 +83,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/cH1Y4vHs/RX72.jpg",
         url2: "https://i.postimg.cc/zGnRCCHz/RX71.jpg",
         url3: "https://i.postimg.cc/LsKrJZrF/rx6.jpg",
-        bed: 3,
+        seats: 3,
         toilet: 2,
         price:100000000
     },
@@ -94,7 +95,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/fLxH12LV/skyline4.jpg",
         url2: "https://i.postimg.cc/rF2nCLf5/skyline2.jpg",
         url3: "https://i.postimg.cc/s2G7NMXx/skyline3.jpg",
-        bed: 3,
+        seats: 3,
         toilet: 2,
         price:10000000
     },
@@ -106,7 +107,7 @@ localStorage.setItem('car',JSON.stringify(car = [{
         url1: "https://i.postimg.cc/DZK6Qrgn/supra.jpg",
         url2: "https://i.postimg.cc/zXfjkXnb/Supra1.webp",
         url3: "https://i.postimg.cc/P5gQhW0Y/supra3.jpg",
-        bed: 3,
+        seats: 3,
         toilet: 2,
         price:100000000
     },
@@ -122,7 +123,7 @@ function getCar(prop){
             <img src="${car.url}" class="card-img-top" alt="..." width="1024" height="183px">
             <div class="card-body">
               <h4 class="card-title">${car.type} from ${car.location}</h4>
-              <h4 class="card-title">${car.bed}<i class="fa-solid fa-chair"></i> <i class="fa-solid fa-car"></i>${car.toilet}</i></h4>
+              <h4 class="card-title">${car.seats}<i class="fa-solid fa-chair"></i> <i class="fa-solid fa-car"></i>${car.toilet}</i></h4>
               <h5>R ${car.price}</h5>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal${index}" onclick="modalProperties()">
                 View car
@@ -190,7 +191,7 @@ function toilet(event){
 function room(event){
     // console.log(car);
     let newRooms = car.filter(car => {
-        return car.bed <= event.target.value
+        return car.seats <= event.target.value
     })
     getCar(newRooms)
 }
@@ -204,6 +205,6 @@ function budget(event){
     getCar(newBudget)
 }
 
-document.querySelector('#car-toilets').addEventListener('change',toilet);
+document.querySelector('#car-seats').addEventListener('change',toilet);
 document.querySelector('#car-rooms').addEventListener('change',room);
 document.querySelector('#car-budget').addEventListener('change',budget);
